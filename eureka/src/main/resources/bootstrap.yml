@@ -1,0 +1,19 @@
+#eureka服务端配置
+server:
+  port: 8761  #端口号
+
+eureka:
+  instance:
+    hostname: localhost #服务注册中心实例的主机名
+  client:
+    fetch-registry: false #是否检索服务
+    register-with-eureka: false #是否向服务注册中心注册自己
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #服务注册中心的配置内容，指定服务注册中心的位置
+
+security:
+  basic:
+    enabled: true #开启安全认证
+  user:
+    name: test  #用户名
+    password: test  #密码

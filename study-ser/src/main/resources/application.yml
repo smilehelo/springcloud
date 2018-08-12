@@ -1,0 +1,6 @@
+#其他配置中心在bootstrap中设置，这里用于指定加载配置中心文件，可动态配置
+spring:
+  cloud:
+    config:
+      profile: dev #版本
+      label: "" #git分支信息，master类似
