@@ -3,6 +3,7 @@ package cn.smilehelo.studyser.controller;
 import cn.smilehelo.studyser.service.feign.FeignUserSer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2018-08-12 16:06
  **/
 @RestController
+@RefreshScope
 public class InfoController {
 
     @Autowired

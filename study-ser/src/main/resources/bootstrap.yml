@@ -22,7 +22,6 @@ feign:
   hystrix:
     enabled: true #开启hystrix断路器功能
 
-
-
-
-
+management:
+  security:
+    enabled: false  #动态刷新配置 ---需要忽略权限拦截
