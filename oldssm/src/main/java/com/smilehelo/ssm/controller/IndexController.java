@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @create: 2018-10-08 23:25
  **/
 @Controller
-@RequestMapping("test")
-public class TestController {
+@RequestMapping("index")
+public class IndexController {
 
     @RequestMapping("test")
     public void test(){
