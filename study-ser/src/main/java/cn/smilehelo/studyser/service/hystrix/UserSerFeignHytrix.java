@@ -1,6 +1,6 @@
 package cn.smilehelo.studyser.service.hystrix;
 
-import cn.smilehelo.studyser.service.feign.FeignUserSer;
+import cn.smilehelo.studyser.service.feign.UserSerFeign;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @create: 2018-08-12 16:45
  **/
 @Component
-public class HytrixUserSer implements FeignUserSer {
+public class UserSerFeignHytrix implements UserSerFeign {
 
     @Override
     public String info() {

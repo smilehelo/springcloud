@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @create: 2018-08-12 16:17
  **/
 @FeignClient("study-ser")
-public interface FeignStudtSer {
+public interface StudtSerFeign {
 
     @RequestMapping("info")
     String info();

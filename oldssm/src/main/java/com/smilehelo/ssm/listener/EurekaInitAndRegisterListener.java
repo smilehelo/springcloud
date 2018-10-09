@@ -15,8 +15,8 @@ import javax.servlet.ServletContextListener;
  */
 public class EurekaInitAndRegisterListener implements ServletContextListener {
 
-    private static final DynamicPropertyFactory configInstance = DynamicPropertyFactory
-            .getInstance();
+/*    private static final DynamicPropertyFactory configInstance = DynamicPropertyFactory
+            .getInstance();*/
 
     /**
      * * Notification that the web application initialization
@@ -28,9 +28,6 @@ public class EurekaInitAndRegisterListener implements ServletContextListener {
      * @param sce
      */
     public void contextInitialized(ServletContextEvent sce) {
-        /**设置被读取配置文件名称  默认config.properties*/
-            //设置被读取配置文件名称  默认config.properties
-        System.setProperty("archaius.configurationSource.defaultFileName", "config.properties");
         /**注册*/
         registerWithEureka();
     }
@@ -39,15 +36,14 @@ public class EurekaInitAndRegisterListener implements ServletContextListener {
         /**加载本地配置文件 根据配置初始化这台 Eureka Application Service 并且注册到 Eureka Server*/
         DiscoveryManager.getInstance().initComponent(
                 new MyInstanceConfig(),
-                new DefaultEurekaClientConfig());
+                new MyEurekaClientConfig());
 
         /**本台 Application Service 已启动，准备好侍服网络请求*/
         ApplicationInfoManager.getInstance().setInstanceStatus(
                 InstanceInfo.InstanceStatus.UP);
 
         /**Application Service 的 Eureka Server 初始化以及注册是异步的，需要一段时间 此处等待初始化及注册成功 可去除*/
-        String vipAddress = configInstance.getStringProperty(
-                "eureka.vipAddress", "test-de").get();
+        String vipAddress = "oldssm";
         InstanceInfo nextServerInfo = null;
         while (nextServerInfo == null) {
             try {

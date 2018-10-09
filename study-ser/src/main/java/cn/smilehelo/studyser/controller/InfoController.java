@@ -1,6 +1,6 @@
 package cn.smilehelo.studyser.controller;
 
-import cn.smilehelo.studyser.service.feign.FeignUserSer;
+import cn.smilehelo.studyser.service.feign.UserSerFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InfoController {
 
     @Autowired
-    private FeignUserSer feignUserSer;
+    private UserSerFeign userSerFeign;
     //从配置中心获取
     @Value("${name}")
     private String testName;
@@ -46,7 +46,7 @@ public class InfoController {
     */ 
     @RequestMapping("feignTest")
     public String feignTest() {
-        return "hello study service " + feignUserSer.info();
+        return "hello study service " + userSerFeign.info();
     }
 
     /** 

@@ -1,6 +1,6 @@
 package cn.smilehelo.userser.controller;
 
-import cn.smilehelo.userser.service.feign.FeignStudtSer;
+import cn.smilehelo.userser.service.feign.StudtSerFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InfoController {
 
     @Autowired
-    private FeignStudtSer feignStudtSer;
+    private StudtSerFeign studtSerFeign;
 
     /** 
     * @Description: info
@@ -32,7 +32,7 @@ public class InfoController {
 
     @RequestMapping("feignTest")
     public String feignTest(){
-        return "hello user service " + feignStudtSer.info();
+        return "hello user service " + studtSerFeign.info();
     }
 
 
