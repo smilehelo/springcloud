@@ -1,12 +1,14 @@
 package com.smilehelo.ssm.controller;
 
 import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.DiscoveryManager;
 import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Applications;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**

@@ -10,9 +10,14 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Set;
 
-/**
- * Created by kowalski 2017/5/25
- */
+
+/** 
+* @Description: 自定义的注册信息
+* @Param:  
+* @return:  
+* @Author: HeLO
+* @Date: 2018/10/10 
+*/ 
 public class MyInstanceConfig extends MyDataCenterInstanceConfig {
 
 
@@ -48,5 +53,29 @@ public class MyInstanceConfig extends MyDataCenterInstanceConfig {
             return super.getNonSecurePort();
         }
         return tomcatPort;
+    }
+
+    /**
+    * @Description: 注册名称
+    * @Param:
+    * @return:
+    * @Author: HeLO
+    * @Date: 2018/10/10
+    */
+    @Override
+    public String getAppname(){
+        return "oldssm";
+    }
+
+    /** 
+    * @Description: vipaddrss地址 
+    * @Param:  
+    * @return:  
+    * @Author: HeLO
+    * @Date: 2018/10/10 
+    */ 
+    @Override
+    public String getVirtualHostName(){
+        return "oldssm";
     }
 }

@@ -13,20 +13,38 @@ import java.util.List;
  **/
 public class MyEurekaClientConfig extends DefaultEurekaClientConfig {
 
+
+    /** 
+    * @Description: 地区，默认即可
+    * @Param:  
+    * @return:  
+    * @Author: HeLO
+    * @Date: 2018/10/10 
+    */ 
     @Override
     public String getRegion() {
         return "default";
     }
 
+    /** 
+    * @Description: 获取地区，默认即可 
+    * @Param:  
+    * @return:  
+    * @Author: HeLO
+    * @Date: 2018/10/10 
+    */ 
     @Override
-    public String getRegistryRefreshSingleVipAddress() {
-        return "oldssm";
-    }
-
     public String[] getAvailabilityZones(String region) {
-        return new String[]{"default"};
+        return new String[]{"defaultZone"};
     }
 
+    /** 
+    * @Description: eureka的注册地址
+    * @Param:  
+    * @return:  
+    * @Author: HeLO
+    * @Date: 2018/10/10 
+    */ 
     @Override
     public List<String> getEurekaServerServiceUrls(String myZone) {
         String serviceUrl = "http://test:test@localhost:8761/eureka/";

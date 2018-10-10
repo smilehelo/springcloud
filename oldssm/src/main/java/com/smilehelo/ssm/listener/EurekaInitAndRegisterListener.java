@@ -9,14 +9,16 @@ import com.netflix.discovery.DiscoveryManager;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-/**
- * Created by Kowalski on 2017/5/18
- * Updated by Kowalski on 2017/5/18
- */
-public class EurekaInitAndRegisterListener implements ServletContextListener {
 
-/*    private static final DynamicPropertyFactory configInstance = DynamicPropertyFactory
-            .getInstance();*/
+/** 
+* @Description: 自定义的eureka注册监听器
+* @Param:  
+* @return:  
+* @Author: HeLO
+* @Date: 2018/10/10 
+*/ 
+public class EurekaInitAndRegisterListener implements ServletContextListener {
+    
 
     /**
      * * Notification that the web application initialization
@@ -53,7 +55,7 @@ public class EurekaInitAndRegisterListener implements ServletContextListener {
             } catch (Throwable e) {
                 System.out.println("Waiting for service to register with eureka..");
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 }
