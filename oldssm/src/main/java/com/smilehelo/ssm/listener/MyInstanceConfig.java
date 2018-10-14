@@ -1,6 +1,8 @@
 package com.smilehelo.ssm.listener;
 
 import com.netflix.appinfo.MyDataCenterInstanceConfig;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
@@ -17,7 +19,7 @@ import java.util.Set;
 * @return:  
 * @Author: HeLO
 * @Date: 2018/10/10 
-*/ 
+*/
 public class MyInstanceConfig extends MyDataCenterInstanceConfig {
 
 
@@ -68,14 +70,20 @@ public class MyInstanceConfig extends MyDataCenterInstanceConfig {
     }
 
     /** 
-    * @Description: vipaddrss地址 
+    * @Description: vipaddrss地址
     * @Param:  
     * @return:  
     * @Author: HeLO
-    * @Date: 2018/10/10 
+    * @Date: 2018/10/14
     */ 
     @Override
     public String getVirtualHostName(){
         return "oldssm";
+    }
+
+
+    @Override
+    public String getInstanceId(){
+        return getHostName(true) + ":" + getNonSecurePort();
     }
 }

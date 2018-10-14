@@ -15,5 +15,17 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
+    <!--
+	  用途1：Spring的xml配置文件中，可以通过${属性名}使用properties文件配置的值
+	  用途2：可以使用@Value("${属性名}")注解读取properties文件配置的值，再给字段赋值
+	         方法1：注解在字段上，给字段赋值
+	         方法2：注解在字段的setter方法中赋值
+    -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>classpath:common.properties</value>
+        </property>
+    </bean>
+
 
 </beans>

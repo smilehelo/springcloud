@@ -2,8 +2,6 @@ package com.smilehelo.ssm.listener;
 
 import com.netflix.appinfo.ApplicationInfoManager;
 import com.netflix.appinfo.InstanceInfo;
-import com.netflix.config.DynamicPropertyFactory;
-import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.DiscoveryManager;
 
 import javax.servlet.ServletContextEvent;

@@ -1,6 +1,7 @@
 package com.smilehelo.ssm.listener;
 
 import com.netflix.discovery.DefaultEurekaClientConfig;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;

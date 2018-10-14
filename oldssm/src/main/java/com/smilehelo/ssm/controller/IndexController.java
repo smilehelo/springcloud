@@ -1,14 +1,13 @@
 package com.smilehelo.ssm.controller;
 
 import com.netflix.appinfo.InstanceInfo;
-import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.DiscoveryManager;
 import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Applications;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,11 +20,11 @@ import java.util.List;
 @RequestMapping("index")
 public class IndexController {
 
+
     @RequestMapping("hello")
     public void hello(){
         System.out.println("hello oldssm!!!");
     }
-
 
     @RequestMapping("test")
     public void test(){
@@ -34,6 +33,8 @@ public class IndexController {
         List<InstanceInfo> list =  applications.getInstancesBySecureVirtualHostName("study-ser");
         InstanceInfo one = list.get(0);
         System.out.println("获取学习服务地址信息为：" + one.getIPAddr() + ":" + one.getPort());
-
     }
+
+
+
 }
