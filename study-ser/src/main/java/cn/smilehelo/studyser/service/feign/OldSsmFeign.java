@@ -18,6 +18,6 @@ public interface OldSsmFeign {
     String string();
 
 
-    @RequestMapping(value = "feign/json",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "feign/json",produces = MediaType.APPLICATION_JSON_VALUE)
     ResultEntity json();
 }

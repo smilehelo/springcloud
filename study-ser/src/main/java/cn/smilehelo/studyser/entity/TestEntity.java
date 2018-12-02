@@ -1,11 +1,24 @@
 package cn.smilehelo.studyser.entity;
 
-public class Test {
+import javax.persistence.*;
+
+/**
+ * @program: springcloud
+ * @description: 测试
+ * @author: HeLO
+ * @create: 2018-11-27 00:35
+ **/
+@Entity
+@Table(name = "test")
+public class TestEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
-    private Integer age;
+    private int age;
 
     private String remark;
 
@@ -22,14 +35,14 @@ public class Test {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -38,6 +51,6 @@ public class Test {
     }
 
     public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
+        this.remark = remark;
     }
 }

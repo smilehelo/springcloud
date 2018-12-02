@@ -57,8 +57,6 @@ public class EurekaInitAndRegisterListener implements ServletContextListener {
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 }
-
-
             }
         }
         System.out.println("Service started and ready to process requests..");

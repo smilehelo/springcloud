@@ -3,7 +3,6 @@ package cn.smilehelo.studyser.controller;
 import cn.smilehelo.studyser.service.feign.OldSsmFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

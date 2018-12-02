@@ -49,13 +49,14 @@ public class InfoController {
         return "hello study service " + userSerFeign.info();
     }
 
-    /** 
-    * @Description: 测试配置中心
-    * @Param:  
-    * @return:  
-    * @Author: HeLO
-    * @Date: 2018/8/12 
-    */ 
+
+    /**
+     * @Description: 测试配置中心
+     * @Param:
+     * @return:
+     * @Author: HeLO
+     * @Date: 2018/8/12
+     */
     @RequestMapping("configTest")
     public String configTest(){
         return testName + testPassword;
