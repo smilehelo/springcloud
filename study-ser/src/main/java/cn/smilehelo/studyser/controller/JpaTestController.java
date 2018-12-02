@@ -2,6 +2,7 @@ package cn.smilehelo.studyser.controller;
 
 import cn.smilehelo.studyser.dao.TestDao;
 import cn.smilehelo.studyser.entity.TestEntity;
+import cn.smilehelo.studyser.service.JpaTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,8 @@ public class JpaTestController {
 
     @Autowired
     private TestDao testDao;
+    @Autowired
+    private JpaTestService jpaTestService;
 
     @RequestMapping("save")
     public void save(){
@@ -33,5 +36,11 @@ public class JpaTestController {
     @RequestMapping("findAll")
     public List<TestEntity> findAll(){
         return testDao.findAll();
+    }
+
+
+    @RequestMapping("findByExample")
+    public List<TestEntity> findByExample(){
+        return jpaTestService.findByExample("今晚");
     }
 }
