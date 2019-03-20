@@ -16,11 +16,20 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @create: 2018-11-27 00:42
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = StudySerApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestEntityService {
 
     @Autowired
     private TestDao testDao;
+
+    @Test
+    public void test() {
+        TestEntity entity = new TestEntity();
+        entity.setName("20181218");
+        entity.setAge(123);
+        entity.setRemark("hahaha");
+        testDao.save(entity);
+    }
 
 
 

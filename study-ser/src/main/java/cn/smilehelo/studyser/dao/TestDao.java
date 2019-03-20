@@ -2,7 +2,6 @@ package cn.smilehelo.studyser.dao;
 
 import cn.smilehelo.studyser.entity.TestEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -14,10 +13,6 @@ import java.util.List;
  **/
 public interface TestDao extends JpaRepository<TestEntity, Long> {
 
-
     List<TestEntity> findByName(String name);
-
-
-
 
 }
