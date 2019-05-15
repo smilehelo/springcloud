@@ -1,7 +1,5 @@
 package cn.smilehelo.studyser.pattern;
 
-import cn.smilehelo.studyser.pattern.factoryPattern.Car;
-
 /**
  * @program: springcloud
  * @description:

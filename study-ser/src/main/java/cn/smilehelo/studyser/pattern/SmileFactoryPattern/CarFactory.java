@@ -1,4 +1,4 @@
-package cn.smilehelo.studyser.pattern.factoryPattern;
+package cn.smilehelo.studyser.pattern.SmileFactoryPattern;
 
 /**
  * @program: springcloud
